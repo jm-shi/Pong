@@ -4,7 +4,7 @@
 //
 
 #include <stdio.h>
-#include <math.h>
+#include <time.h>
 #include <SDL2/SDL.h>
 #include <SDL2_ttf/SDL_ttf.h>
 #include "main.h"
@@ -19,8 +19,8 @@ void initializeGame(GameState *game) {
     
     game->gameBall.x = SCREEN_WIDTH/2 - SCREEN_WIDTH/3;
     game->gameBall.y = SCREEN_HEIGHT/2 - BALL_SIZE/2;
-    game->gameBall.speedX = 10;
-    game->gameBall.speedY = 5;
+    game->gameBall.speedX = 15;
+    game->gameBall.speedY = 7;
     game->gameBall.directionX = 1;
     game->gameBall.directionY = 1;
     game->gameBall.size = BALL_SIZE;
@@ -34,8 +34,8 @@ void initializeGame(GameState *game) {
 void resetBall(GameState *game) {
     game->gameBall.x = SCREEN_WIDTH/2 - game->previousWinner*SCREEN_WIDTH/3;
     game->gameBall.y = SCREEN_HEIGHT/2 - BALL_SIZE/2;
-    game->gameBall.speedX = 10;
-    game->gameBall.speedY = 5;
+    game->gameBall.speedX = 15;
+    game->gameBall.speedY = 7;
     game->gameBall.directionX = game->previousWinner;
     game->gameBall.directionY = 1;
     game->gameBall.size = BALL_SIZE;
